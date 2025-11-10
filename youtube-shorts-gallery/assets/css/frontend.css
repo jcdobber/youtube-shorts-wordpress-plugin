@@ -1,11 +1,15 @@
 .ysg-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 1.25rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    gap: 1.5rem;
 }
 
 .ysg-item {
     position: relative;
+    width: 100%;
+    max-width: 280px;
 }
 
 .ysg-card {
@@ -156,7 +160,11 @@
 
 @media (max-width: 600px) {
     .ysg-gallery {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .ysg-item {
+        max-width: 240px;
     }
 
     .ysg-modal__dialog {
