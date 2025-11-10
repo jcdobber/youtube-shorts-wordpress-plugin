@@ -1,0 +1,165 @@
+.ysg-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1.25rem;
+}
+
+.ysg-item {
+    position: relative;
+}
+
+.ysg-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    text-align: left;
+}
+
+.ysg-card:focus,
+.ysg-card:hover {
+    outline: none;
+}
+
+.ysg-card:focus-visible {
+    outline: 2px solid #ff5722;
+    outline-offset: 4px;
+}
+
+.ysg-thumbnail {
+    display: block;
+    width: 100%;
+    padding-bottom: 177.77%; /* 9:16 ratio */
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.ysg-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.75rem;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.65) 100%);
+    border-radius: 16px;
+    color: #fff;
+}
+
+.ysg-play-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 87, 34, 0.85);
+    border-radius: 999px;
+    position: relative;
+    margin: auto auto 0 auto;
+}
+
+.ysg-play-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-left: 14px solid #fff;
+    transform: translate(-40%, -50%);
+}
+
+.ysg-duration {
+    align-self: flex-end;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.ysg-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111;
+}
+
+.ysg-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.ysg-modal.is-active {
+    display: flex;
+}
+
+.ysg-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+}
+
+.ysg-modal__dialog {
+    position: relative;
+    background: #fff;
+    border-radius: 16px;
+    max-width: 900px;
+    width: 90%;
+    padding: 1.5rem;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.ysg-modal__close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    border: none;
+    background: transparent;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.ysg-modal__video {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.ysg-modal__video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.ysg-modal__title {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.ysg-modal__description {
+    margin: 0;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    .ysg-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+
+    .ysg-modal__dialog {
+        padding: 1rem;
+    }
+}
