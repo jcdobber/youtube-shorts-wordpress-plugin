@@ -1,6 +1,6 @@
 .ysg-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 1.25rem;
 }
 
@@ -156,7 +156,7 @@
 
 @media (max-width: 600px) {
     .ysg-gallery {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     }
 
     .ysg-modal__dialog {
