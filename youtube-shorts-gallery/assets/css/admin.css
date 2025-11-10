@@ -1,0 +1,25 @@
+.ysg-admin .ysg-table {
+    margin-top: 1rem;
+}
+
+.ysg-admin .ysg-table th,
+.ysg-admin .ysg-table td {
+    vertical-align: top;
+}
+
+.ysg-admin .ysg-table input[type="text"],
+.ysg-admin .ysg-table input[type="url"],
+.ysg-admin .ysg-table textarea {
+    width: 100%;
+}
+
+.ysg-admin .column-actions {
+    width: 60px;
+    text-align: center;
+}
+
+.ysg-admin .ysg-remove-row {
+    font-size: 20px;
+    line-height: 1;
+    padding: 0 0.6em;
+}
